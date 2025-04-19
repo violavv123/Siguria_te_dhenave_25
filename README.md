@@ -23,6 +23,13 @@ java src.Main
 pa pasur nevojë të përdorni terminalin.
 
 ## **Pershkrimi i Algoritmit**
+### 1. Vigenère Cipher
+Vigenère Cipher është një nga algoritmet më të njohura të kriptimit polialfabetik,
+i zhvilluar nga kriptografi francez Blaise de Vigenère në shekullin e 16-të. Ndryshe nga shifrat e thjeshta monoalfabetike (si Caesar Cipher), Vigenère përdor një çelës (fjalkalim) për të krijuar zhvendosje të ndryshme për secilën shkronjë, 
+duke e bërë më të vështirë thyerjen e tij përmes analizës së frekuencës.
+
+#### Hapat per enkriptim:
+
 ### 2. Turning Grille (Fleissner Grille)
 
 Turning Grille Encryption është një teknikë klasike e fshehtësisë ku përdoret një grilë (shabllon me vrima)
