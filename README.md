@@ -29,6 +29,32 @@ i zhvilluar nga kriptografi francez Blaise de Vigenère në shekullin e 16-të. 
 duke e bërë më të vështirë thyerjen e tij përmes analizës së frekuencës.
 
 #### Hapat per enkriptim:
+1.Përgatitja e tekstit dhe çelësit:
+   Konverto të gjitha shkronjat në UPPERCASE.
+   Largo karakteret jo-alfabetike ose mbaji të pandryshuara (opsionale).
+
+2.Përsëritja e çelësit:
+Nëse çelësi është më i shkurtër se teksti, ai përsëritet ciklikisht.
+P.sh., për tekstin "HELLOWORLD" dhe çelësin "KEY", çelësi bëhet "KEYKEYKEYK".
+
+3.Llogaritja e zhvendosjes:
+Për çdo shkronjë P në tekst dhe shkronjën korresponduese K në çelës:
+Konverto P dhe K në indekse numerike (A=0, B=1, ..., Z=25).
+
+4.Apliko formulën:
+
+C = (P + K) mod 26
+Konverto rezultatin C përsëri në shkronjë.
+Shembull i Plotë:
+Teksti i thjeshtë: "HELLO"
+Çelësi: "KEY"
+
+H(7) + K(10) = 17 → R  
+E(4) + E(4) = 8 → I  
+L(11) + Y(24) = 35 → 35 mod 26 = 9 → J  
+L(11) + K(10) = 21 → V  
+O(14) + E(4) = 18 → S  
+Rezultati: "RIJVS"
 
 ### 2. Turning Grille (Fleissner Grille)
 
@@ -51,6 +77,17 @@ Në thelb, është një kriptim simetrik me çelës vizual (grilën), që siguro
 2. Grille kontrollon pozitat ku janë true dhe karakteri qe gjendet në të njejten pozitë në matricë ruhet në një string.
 3. Grille rrotullohet 4 herë 90° që të lexohen të gjitha karakteret.
 4. Karakteret e ruajtura në string pas çdo rrotullimi kthejnë si rezultat tesktin e dekriptuar.
+
+### Rezultatet e ekzkeutimit nw algoritmin Vigenere :
+
+1. **Enkriptimi**:
+   Shprehja origjinale"SHIHEMI NE ROUTE 66 NE ORA 6"
+   kalon ne procesin e enkriptimit permes Vigenere me celesin "LIMONI" dhe na kthehet shprehja:
+   DPUVRUT VQ FBCEM 66 ZS BZL 6
+
+
+
+
 
 ### Rezultatet e ekzekutimit në algoritmin Turning Grille (Fleissner Grille)
 
