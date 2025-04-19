@@ -10,7 +10,7 @@ Për qëllime demonstrimi, kemi marrë shprehjen:
 
 1. **Enkriptimi**:  
    Shprehja origjinale kalon ne procesin e enkriptimit permes Turning Grille dhe na kthehet shprehja:  
-   **`G**I1**R*5U**P**0`**  
+   **`G**I1**R*5U**P**`**  
    (ku pozitat e zbrazëta janë te mbushura me * dhe karakteret transformohen në uppercase).
 
 2. **Dekriptimi**:   
