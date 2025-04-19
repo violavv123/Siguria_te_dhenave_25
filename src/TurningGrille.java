@@ -7,8 +7,8 @@ public class TurningGrille {
 
     static boolean[][] grille = {
             { true, false, false, false },
-            { false, false, true, false },
             { false, false, false, true },
+            { false, false, true, false },
             { false, true, false, false }
     };
 
@@ -44,6 +44,33 @@ public class TurningGrille {
                 encrypted.append(matrix[i][j]);
         return encrypted.toString();
     }
+    public static String decrypt(String encryptedmessage) {
+        if (encryptedmessage.length() != n * n)
+            throw new IllegalArgumentException("Teksti i enkriptuar duhet të jetë " + (n * n) + " karakterësh!");
+
+        char[][] matrixfill = new char[n][n];
+        int index = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrixfill[i][j] = encryptedmessage.charAt(index++);
+            }
+        }
+
+        StringBuilder decryptedmessage = new StringBuilder();
+        for (int r = 0; r < 4; r++) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if(grille[i][j]) {
+                        decryptedmessage.append(matrixfill[i][j]);
+                    }
+                }
+            }
+            grille = rotate(grille);
+        }
+
+        return decryptedmessage.toString().toUpperCase().replace("*", "");
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String choice;
@@ -71,7 +98,20 @@ public class TurningGrille {
                 } catch (IllegalArgumentException e) {
                     System.out.println("Gabim: " + e.getMessage());
                 }
-            } // qitu e bon ni else if edhe e shkrun tani pjesen tone per dekriptim
+            } else if (choice.equals("2")) {
+                System.out.print("Per dekriptim, shkruani mesazhin e enkriptuar (max 16 karaktere): ");
+                String encryptedinput = sc.nextLine().replaceAll("\\s+", "").toUpperCase();
+
+                try {
+                    String decrypted = decrypt(encryptedinput);
+                    System.out.println("\n----------------------------------------");
+                    System.out.println("Teksti i enkriptuar: " + encryptedinput);
+                    System.out.println("Teksti i dekriptuar: " + decrypted);
+                    System.out.println("----------------------------------------");
+                } catch (IllegalArgumentException e) {
+                    System.out.println("Gabim: " + e.getMessage());
+                }
+            }
 
             System.out.print("\nDeshironi te vazhdoni? (p/j): ");
             choice = sc.nextLine().trim().toLowerCase();
