@@ -1,11 +1,27 @@
 # Siguria_te_dhenave_25
 Projekti 2 - Vigenere Cipher dhe Turning Grille (Fleissner Grille)
 
-### Rezultatet e ekzekutimit
+
+### 2. Turning Grille (Fleissner Grille)
+
+Turning Grille Encryption është një teknikë klasike e fshehtësisë ku përdoret një grilë (shabllon me vrima)
+mbi një tabelë me tekst. Grila vendoset mbi tabelë dhe përmes vrimave shkruhet mesazhi. Pastaj grila rrotullohet
+(zakonisht 90°) disa herë për të plotësuar tabelën me pjesët e tjera të mesazhit. Marrësi që ka të njëjtën grilë mund ta
+lexojë mesazhin duke e rrotulluar në të njëjtin rend.
+Në thelb, është një kriptim simetrik me çelës vizual (grilën), që siguron siguri përmes fshehjes së rendit të shkronjave
+
+##### Hapat per enkriptim:
+1. Krijo matricën bosh n x n dhe mbushe me karakterin '*'.
+2. Vendos grilën në pozicionin fillestar.
+3. Për çdo rrotullim (4 herë):
+   Shkruaj shkronjat e mesazhit në pozicionet true të grilës.
+   Rrotullo grilën 90° majtas.
+4. Pas plotësimit, lexo matricën rresht pas rreshti për të marrë tekstin e enkriptuar.
+
 
 #### Rezultatet e ekzekutimit në algoritmin Turning Grille (Fleissner Grille)
 
-Për qëllime demonstrimi, kemi marrë shprehjen:  
+Për qëllime demonstrimi, kemi marrë shprehjen: 
 **_`grupi15`_**
 
 1. **Enkriptimi**:  
@@ -19,4 +35,5 @@ Për qëllime demonstrimi, kemi marrë shprehjen:
    dhe bëjmë dekriptimin e shprehjes, që rezulton ne shprehjen e fillimit:  
    **`GRUPI15`**  
    (karakteret * eliminohen dhe kjo poashtu transformon shprehjen ne uppercase).
+
 
