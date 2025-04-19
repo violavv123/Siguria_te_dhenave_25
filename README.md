@@ -39,8 +39,13 @@ Në thelb, është një kriptim simetrik me çelës vizual (grilën), që siguro
    Rrotullo grilën 90° majtas.
 4. Pas plotësimit, lexo matricën rresht pas rreshti për të marrë tekstin e enkriptuar.
 
+#### Hapat për dekriptim:
+1. Teksti i enkriptuar mbush matricën 4x4.
+2. Grille kontrollon pozitat ku janë true dhe karakteri qe gjendet në të njejten pozitë në matricë ruhet në një string.
+3. Grille rrotullohet 4 herë 90° që të lexohen të gjitha karakteret.
+4. Karakteret e ruajtura në string pas çdo rrotullimi kthejnë si rezultat tesktin e dekriptuar.
 
-#### Rezultatet e ekzekutimit në algoritmin Turning Grille (Fleissner Grille)
+### Rezultatet e ekzekutimit në algoritmin Turning Grille (Fleissner Grille)
 
 Për qëllime demonstrimi, kemi marrë shprehjen: 
 **_`grupi15`_**
