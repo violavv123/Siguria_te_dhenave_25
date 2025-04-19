@@ -86,9 +86,6 @@ Në thelb, është një kriptim simetrik me çelës vizual (grilën), që siguro
    DPUVRUT VQ FBCEM 66 ZS BZL 6
 
 
-
-
-
 ### Rezultatet e ekzekutimit në algoritmin Turning Grille (Fleissner Grille)
 
 Për qëllime demonstrimi, kemi marrë shprehjen: 
