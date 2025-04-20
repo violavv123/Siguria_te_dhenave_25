@@ -99,7 +99,7 @@ public class TurningGrille {
                     System.out.println("Gabim: " + e.getMessage());
                 }
             } else if (choice.equals("2")) {
-                System.out.print("Per dekriptim, shkruani mesazhin e enkriptuar (max 16 karaktere): ");
+                System.out.print("Per dekriptim, shkruani mesazhin e enkriptuar (16 karaktere): ");
                 String encryptedinput = sc.nextLine().replaceAll("\\s+", "").toUpperCase();
 
                 try {
