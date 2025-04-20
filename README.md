@@ -39,32 +39,82 @@ i zhvilluar nga kriptografi francez Blaise de Vigenère në shekullin e 16-të. 
 duke e bërë më të vështirë thyerjen e tij përmes analizës së frekuencës.
 
 #### Hapat per enkriptim:
-1.Përgatitja e tekstit dhe çelësit:
-   Konverto të gjitha shkronjat në UPPERCASE.
-   Largo karakteret jo-alfabetike ose mbaji të pandryshuara (opsionale).
+**1.Përgatitja e tekstit dhe çelësit:**
+   - Konverto të gjitha shkronjat në UPPERCASE.
+   - Largo karakteret jo-alfabetike ose mbaji të pandryshuara (opsionale).
 
-2.Përsëritja e çelësit:
-Nëse çelësi është më i shkurtër se teksti, ai përsëritet ciklikisht.
-P.sh., për tekstin "HELLOWORLD" dhe çelësin "KEY", çelësi bëhet "KEYKEYKEYK".
+**2.Përsëritja e çelësit:**
+- Nëse çelësi është më i shkurtër se teksti, ai përsëritet ciklikisht.
+- P.sh., për tekstin "HELLOWORLD" dhe çelësin "KEY", çelësi bëhet "KEYKEYKEYK".
 
-3.Llogaritja e zhvendosjes:
-Për çdo shkronjë P në tekst dhe shkronjën korresponduese K në çelës:
-Konverto P dhe K në indekse numerike (A=0, B=1, ..., Z=25).
+**3.Llogaritja e zhvendosjes:**
+- Për çdo shkronjë P në tekst dhe shkronjën korresponduese K në çelës:
+- Konverto P dhe K në indekse numerike (A=0, B=1, ..., Z=25).
 
-4.Apliko formulën:
+**4.Apliko formulën:**
 
-C = (P + K) mod 26
-Konverto rezultatin C përsëri në shkronjë.
-Shembull i Plotë:
-Teksti i thjeshtë: "HELLO"
-Çelësi: "KEY"
+- C = (P + K) mod 26
+- Konverto rezultatin C përsëri në shkronjë.
+- Shembull i Plotë:
+- Teksti i thjeshtë: "HELLO"
+- Çelësi: "KEY"
 
-H(7) + K(10) = 17 → R  
-E(4) + E(4) = 8 → I  
-L(11) + Y(24) = 35 → 35 mod 26 = 9 → J  
-L(11) + K(10) = 21 → V  
-O(14) + E(4) = 18 → S  
-Rezultati: "RIJVS"
+- H(7) + K(10) = 17 → R  
+- E(4) + E(4) = 8 → I  
+- L(11) + Y(24) = 35 → 35 mod 26 = 9 → J  
+- L(11) + K(10) = 21 → V  
+- O(14) + E(4) = 18 → S  
+**Rezultati: "RIJVS"**
+
+### Hapat për dekriptim
+
+1. **Përgatitja e tekstit dhe çelësit:**
+
+    - Konverto **mesazhin e enkriptuar** (ciphertext) dhe **çelësin** në **shkronja të mëdha** (UPPERCASE).
+    - Largo ose trajto karakteret jo-alfabetike nëse është e nevojshme (mund të mbeten të pandryshuara).
+
+2. **Përsëritja e çelësit:**
+
+    - Nëse çelësi është më i shkurtër se ciphertext, ai duhet të **përsëritet ciklikisht** derisa të mbulojë gjithë gjatësinë e tekstit të enkriptuar.
+    - **Shembull**:
+      ```
+      Teksti i enkriptuar: "RIJVS"
+      Çelësi: "KEY" → përsëritet si "KEYKE"
+      ```
+
+3. **Llogaritja e zhvendosjes për dekriptim:**
+
+    - Për çdo shkronjë `C` në tekstin e enkriptuar dhe shkronjën përkatëse `K` nga çelësi:
+        - Konverto të dyja në indekse numerike (A = 0, B = 1, ..., Z = 25).
+        - Apliko formulën për dekriptim:
+
+          ```
+          P = (C - K + 26) mod 26
+          ```
+
+        - Ku:
+            - `P` është pozita e shkronjës së plaintext-it
+            - `C` është pozita e shkronjës së enkriptuar
+            - `K` është pozita e shkronjës në çelës
+            - `+26` siguron që rezultati të jetë pozitiv
+
+4. **Konvertimi në shkronja:**
+
+    - Pas llogaritjes së çdo `P`, konverto rezultatin përsëri në shkronjë për të rindërtuar tekstin e dekoduar.
+
+---
+####  Shembull i plotë:
+
+**Ciphertext: R I J V S Çelësi: K E Y K E**
+
+- R(17) - K(10) = 7 → H
+- I(8) - E(4) = 4 → E
+- J(9) - Y(24) = -15+26=11 → L
+- V(21) - K(10) = 11 → L
+- S(18) - E(4) = 14 → O
+
+**Teksti i dekriptuar: `HELLO`**
+
 
 ### 2. Turning Grille (Fleissner Grille)
 
