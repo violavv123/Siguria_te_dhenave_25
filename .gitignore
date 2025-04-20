@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-# Compiled class file
+# Compiled class files
 *.class
 
-# Log file
+# Log files
 *.log
 
 # BlueJ files
@@ -11,7 +10,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.nar
@@ -20,16 +19,18 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Virtual Machine crash logs
 hs_err_pid*
 replay_pid*
-=======
-### IntelliJ IDEA ###
+
+# IntelliJ IDEA
+.idea/
+*.iml
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### Eclipse ###
+# Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -41,16 +42,25 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+# Visual Studio Code
 .vscode/
 
-### Mac OS ###
+# macOS
 .DS_Store
->>>>>>> f8e40d1 (init commit)
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Backup and temp files
+*.swp
+*.swo
+*~
+*.tmp

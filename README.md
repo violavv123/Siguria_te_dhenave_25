@@ -13,14 +13,24 @@ _**2.**_ Pasi të keni klonuar projektin, hapeni atë në një ambient zhvillimi
 Visual Studio Code, apo çfarëdo IDE tjetër që e mbështet Java.
 
 **_3._** Për të kompiluar dhe më pas ekzekutuar programin, përdorni komandat më poshtë në terminal 
-(sigurohuni që jeni brenda folderit të projektit):
+(sigurohuni që jeni brenda folderti src/ kur përdorni komandat java dhe javac):
 ```bash
-javac src/*.java
-java src.Main
+javac src/Vigenere.java
+java src.Vigenere
+javac src/TurningGrille.java
+java src.TurningGrille
 ```
+**_4._** Pra varësisht se cilin alogirtëm dëshironi të përdorni për enkriptim dhe dekriptim, zgjedhni klasën
+java përkatëse.
 
-**_4._** Nëse po përdorni një IDE, mund ta ekzekutoni programin edhe thjesht duke klikuar butonin "Run" 
-pa pasur nevojë të përdorni terminalin.
+**_5._** Nëse po përdorni një IDE, mund ta ekzekutoni programin edhe thjesht duke klikuar butonin "Run" 
+pa pasur nevojë të përdorni terminalin. Gjithashtu Java JDK e instaluar rekomandohet të jetë e versionit
+8+.
+
+**_6._** Në algorimtin Vigenere Cipher pas ekzekutimit të programit do të pritet të shfaqet mesazhi i enkriptuar
+dhe i dekriptuar, kurse mesazhi dhe passwordi editohen brenda kodit jo në terminal. Në algorimtin
+Turning Grille Cipher ofrohet menzja interaktive në terminal e cila ofron dy opsione: enkriptimi dhe 
+dekriptimin.
 
 ## **Pershkrimi i Algoritmit**
 ### 1. Vigenère Cipher
@@ -78,12 +88,35 @@ Në thelb, është një kriptim simetrik me çelës vizual (grilën), që siguro
 3. Grille rrotullohet 4 herë 90° që të lexohen të gjitha karakteret.
 4. Karakteret e ruajtura në string pas çdo rrotullimi kthejnë si rezultat tesktin e dekriptuar.
 
-### Rezultatet e ekzkeutimit nw algoritmin Vigenere :
+### Rezultatet e ekzekutimit në algoritmin Vigenere :
 
-1. **Enkriptimi**:
-   Shprehja origjinale"SHIHEMI NE ROUTE 66 NE ORA 6"
-   kalon ne procesin e enkriptimit permes Vigenere me celesin "LIMONI" dhe na kthehet shprehja:
-   DPUVRUT VQ FBCEM 66 ZS BZL 6
+###  1. Enkriptimi
+
+Gjatë ekzekutimit të programit, përdoruesi jep një mesazh tekstual dhe një çelës. Në këtë demonstrim:
+
+- **Mesazhi origjinal**:  
+  `SHIHEMI NE ROUTE 66 NE ORA 6`
+
+- **Çelësi i përdorur për enkriptim**:  
+  `LIMONI`
+
+Algoritmi transformon shkronjat alfabetike përmes zhvendosjes sipas shkronjave të çelësit, ndërsa karakteret jo-alfabetike (si hapësirat dhe numrat) ruhen të pandryshuara.
+
+**Mesazhi i enkriptuar është:**
+`DPUVRUT VQ FBCEM 66 ZS BZL 6`
+
+### 2. Dekriptimi
+
+Pas enkriptimit, algoritmi është në gjendje të rikthejë tekstin origjinal duke përdorur të njëjtin çelës.
+
+- **Teksti i enkriptuar**:  
+  `DPUVRUT VQ FBCEM 66 ZS BZL 6`
+
+- **Çelësi për dekriptim**:  
+  `LIMONI`
+
+**Mesazhi i rikuperuar pas dekriptimit është:**
+`SHIHEMI NE ROUTE 66 NE ORA 6`
 
 
 ### Rezultatet e ekzekutimit në algoritmin Turning Grille (Fleissner Grille)
