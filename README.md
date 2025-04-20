@@ -37,6 +37,8 @@ dekriptimin.
 Vigenère Cipher është një nga algoritmet më të njohura të kriptimit polialfabetik,
 i zhvilluar nga kriptografi francez Blaise de Vigenère në shekullin e 16-të. Ndryshe nga shifrat e thjeshta monoalfabetike (si Caesar Cipher), Vigenère përdor një çelës (fjalkalim) për të krijuar zhvendosje të ndryshme për secilën shkronjë, 
 duke e bërë më të vështirë thyerjen e tij përmes analizës së frekuencës.
+Një nga avantazhet kryesore të Vigenère është se përdor një çelës të ndryshëm për çdo shkronjë të mesazhit, duke e bërë më të vështirë për të zbuluar mesazhin krahasuar me metodat e tjera, siç është Caesar Cipher. Megjithatë, nëse çelësi është i njohur ose i parashikueshëm, mund të thyhet relativisht lehtë, sidomos nëse mesazhi është i gjatë dhe mund të zbulohet një pattern në përdorimin e çelësit.
+Vigenère Cipher ka qenë një nga metodat më të njohura për kriptimin e mesazheve për shumë kohë, por tani përdoren algoritme më të avancuara dhe më të sigurta, si AES (Advanced Encryption Standard), për kriptimin e të dhënave të ndjeshme.
 
 #### Hapat per enkriptim:
 **1.Përgatitja e tekstit dhe çelësit:**
